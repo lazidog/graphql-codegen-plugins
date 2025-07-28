@@ -26,7 +26,6 @@
     "typescript-resolvers"
   ],
   "publishConfig": {
-    "directory": "dist",
     "access": "public"
   },
   "author": "lazidog",
