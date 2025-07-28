@@ -1,0 +1,35 @@
+{
+  "name": "@lazidog/graphql-codegen-typescript-resolvers",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "graphql": "^16"
+  },
+  "devDependencies": {
+    "@graphql-codegen/plugin-helpers": "^5.1.1",
+    "@graphql-codegen/typescript-resolvers": "^4.0.1",
+    "@graphql-tools/utils": "^10.5.4",
+    "typescript": "^5"
+  },
+  "peerDependencies": {
+    "@graphql-codegen/cli": "5.0.0"
+  },
+  "keywords": [
+    "codegen",
+    "graphql",
+    "plugin",
+    "graphql-codegen-plugin",
+    "typescript-resolvers"
+  ],
+  "publishConfig": {
+    "directory": "dist",
+    "access": "public"
+  },
+  "author": "lazidog",
+  "license": "MIT",
+  "preferGlobal": true
+}

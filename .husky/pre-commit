@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+pnpm lint-staged
+
+check_if_changelog_file_updated() {
+  BRANCH=$(git rev-parse --abbrev-ref HEAD);
+  if [ "$BRANCH" = "main" ] || [ "$BRANCH" = "dev" ]; then
+    echo "[CHECKIT] Maybe CHANGELOG file not updated!";
+    # dont know why --cached --quiet not working so I decide to use CHANGELOG
+    # TODO: find another way
+    git diff --cached --name-only | grep '^CHANGELOG.md$';
+  fi
+  exit 0;
+}
+
+check_if_changelog_file_updated;

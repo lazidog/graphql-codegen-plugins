@@ -1,0 +1,37 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "organizeImports": {
+    "enabled": true
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "correctness": {
+        "noUnusedImports": "warn"
+      },
+      "a11y": {
+        "useButtonType": "off"
+      },
+      "style": {
+        "useEnumInitializers": "off"
+      },
+      "complexity": {
+        "noUselessConstructor": "off"
+      }
+    }
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2
+  },
+  "files": {
+    "ignore": [
+      "node_modules/**",
+      ".next/**",
+      ".dist/**",
+      "next-env.d.ts",
+      "*/**/__generated__/**"
+    ]
+  }
+}

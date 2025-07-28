@@ -1,0 +1,27 @@
+{
+  "name": "@lazidog/graphql-codegen-plugins",
+  "private": true,
+  "packageManager": "pnpm@9.3.0",
+  "devDependencies": {
+    "@biomejs/biome": "1.8.3",
+    "concurrently": "^8.2.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.1.0",
+    "turbo": "^2.4.2"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "fmt": "turbo run fmt",
+    "test": "turbo run test",
+    "postinstall": "turbo build --filter=\"./packages/*\""
+  },
+  "pnpm": {
+    "overrides": {
+      "graphql": "16.8.1",
+      "typescript": "5.6.3"
+    }
+  }
+}
