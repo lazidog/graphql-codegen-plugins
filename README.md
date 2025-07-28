@@ -1,1 +1,1 @@
-# graphql-codegen-typescript-resolvers
+# graphql-codegen-plugins
